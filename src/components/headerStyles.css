@@ -1,0 +1,23 @@
+/* headerStyles.css */
+
+/* Styles for Header */
+.header {
+  background-color: #1d2935;
+  padding: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-link {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.nav-link:hover {
+  color: #3498db;
+}
