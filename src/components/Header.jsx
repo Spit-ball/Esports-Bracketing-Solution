@@ -19,9 +19,11 @@ const Header = ({ isLoggedIn }) => {
         <Link to="/about" className="nav-link">
           About
         </Link>
-        <Link to="/profile" className="nav-link">
-          Profile
-        </Link>
+        {isLoggedIn && (
+          <Link to="/profile" className="nav-link">
+            Profile
+          </Link>
+        )}
       </nav>
     </header>
   );

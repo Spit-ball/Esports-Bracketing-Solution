@@ -1,8 +1,15 @@
 // Login.jsx
 import React from "react";
+import { Navigate } from "react-router-dom";
 import "./loginRegisterStyles.css"; // Import the styles
 
-const Login = () => {
+const Login = ({ setIsLoggedIn }) => {
+  const handleLoginClick = () => {
+    // Your login logic here
+    // For simplicity, let's assume login is successful
+    setIsLoggedIn(true);
+  };
+
   return (
     <div className="page-container">
       <h2 className="page-title">Login</h2>
@@ -24,7 +31,11 @@ const Login = () => {
             name="password"
           />
         </div>
-        <button className="button" type="submit">
+        <button
+          className="button"
+          type="button" // Change this to "submit" if you want to submit the form
+          onClick={handleLoginClick}
+        >
           Login
         </button>
       </form>
