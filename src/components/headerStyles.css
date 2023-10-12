@@ -1,6 +1,3 @@
-/* headerStyles.css */
-
-/* Styles for Header */
 .header {
   background-color: #1d2935;
   padding: 10px;
@@ -12,7 +9,7 @@
 }
 
 .nav-link {
-  color: #ecf0f1;
+  color: #f39c12;
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;

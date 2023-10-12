@@ -1,17 +1,18 @@
-/* homeStyles.css */
+/* aboutStyles.css */
 
-/* Styles for Home Page */
-.home-container {
+.about-page-container {
   max-width: 600px;
   margin: 50px auto;
   padding: 20px;
-  border: 1px solid #ced4da;
+  background-color: #ffffff;
+  border: 1px solid #34495e;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.home-title {
+.about-page-title {
   font-size: 24px;
   margin-bottom: 20px;
   text-align: center;
+  color: #f39c12;
 }

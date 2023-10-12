@@ -1,7 +1,6 @@
-// Header.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import "./headerStyles.css"; // Import the styles
+import "./headerStyles.css";
 
 const Header = ({ isLoggedIn }) => {
   return (

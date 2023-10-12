@@ -1,40 +1,49 @@
-// Register.jsx
-import React from "react";
-import "./loginRegisterStyles.css"; // Import the styles
+// In your Register component
+import React, { useState } from "react";
+import axios from "axios";
 
 const Register = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+
+    axios.defaults.headers.post["Content-Type"] = "application/json";
+
+    console.log({ headers: axios.defaults.headers });
+    try {
+      const response = await axios.post("/api/register", {
+        username,
+        password,
+      });
+
+      console.log(response.data); // You can handle success or redirect here
+    } catch (error) {
+      console.error("Registration failed:", error);
+    }
+  };
+
   return (
-    <div className="page-container">
-      <h2 className="page-title">Register</h2>
-      <form>
-        <div className="form-group">
-          <label className="label" htmlFor="username">
-            Username:
-          </label>
-          <input className="input" type="text" id="username" name="username" />
-        </div>
-        <div className="form-group">
-          <label className="label" htmlFor="email">
-            Email:
-          </label>
-          <input className="input" type="email" id="email" name="email" />
-        </div>
-        <div className="form-group">
-          <label className="label" htmlFor="password">
-            Password:
-          </label>
-          <input
-            className="input"
-            type="password"
-            id="password"
-            name="password"
-          />
-        </div>
-        <button className="button" type="submit">
-          Register
-        </button>
-      </form>
-    </div>
+    <form onSubmit={handleRegister}>
+      <label htmlFor="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
+
+      <label htmlFor="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+
+      <button type="submit">Register</button>
+    </form>
   );
 };
 

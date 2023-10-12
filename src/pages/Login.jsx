@@ -1,11 +1,9 @@
-// Login.jsx
 import React from "react";
 import { Navigate } from "react-router-dom";
-import "./loginRegisterStyles.css"; // Import the styles
+import "./loginRegisterStyles.css";
 
 const Login = ({ setIsLoggedIn }) => {
   const handleLoginClick = () => {
-    // Your login logic here
     // For simplicity, let's assume login is successful
     setIsLoggedIn(true);
   };
@@ -33,7 +31,7 @@ const Login = ({ setIsLoggedIn }) => {
         </div>
         <button
           className="button"
-          type="button" // Change this to "submit" if you want to submit the form
+          type="button" // Change this to "submit" to submit the form
           onClick={handleLoginClick}
         >
           Login

@@ -1,18 +1,43 @@
-/* homeStyles.css */
+.home-page-full {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
 
-/* Styles for Home Page */
 .home-container {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
+  flex: 0 0 calc(65% - 50px);
+  margin-top: 50px;
+  margin-left: 50px;
   background-color: #ffffff;
   border: 1px solid #ced4da;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .home-title {
   font-size: 24px;
   margin-bottom: 20px;
   text-align: center;
+  color: #f39c12;
+}
+
+.rightSidebarInfo {
+  flex: 0 0 calc(30% - 90px);
+  margin-top: 50px;
+  margin-right: 90px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  box-sizing: border-box;
+}
+
+.rightSidebarInfo-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #f39c12;
 }
